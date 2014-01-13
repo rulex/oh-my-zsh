@@ -59,6 +59,22 @@ alias gbsg='git bisect good'
 alias gbsr='git bisect reset'
 alias gbss='git bisect start'
 
+compdef g=git
+alias gst='git status'
+compdef _git gst=git-status
+alias gd='git diff'
+compdef _git gd=git-diff
+alias gdc='git diff --cached'
+compdef _git gdc=git-diff
+#alias gl='git pull'
+#compdef _git gl=git-pull
+alias gup='git pull --rebase'
+compdef _git gup=git-fetch
+alias gp='git push'
+compdef _git gp=git-push
+alias gd='git diff'
+gdv() { git diff -w "$@" | view - }
+compdef _git gdv=git-diff
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
 alias gcn!='git commit -v --no-edit --amend'
@@ -83,6 +99,25 @@ alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gcs='git commit -S'
+compdef _git gcp=git-cherry-pick
+#alias glg='git log --stat --max-count=10'
+#compdef _git glg=git-log
+alias glgg='git log --graph --max-count=10'
+compdef _git glgg=git-log
+alias glgga='git log --graph --decorate --all'
+compdef _git glgga=git-log
+alias glo='git log --oneline'
+compdef _git glo=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
+alias gm='git merge'
+compdef _git gm=git-merge
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
+alias gclean='git reset --hard && git clean -dfx'
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 alias gd='git diff'
 alias gdca='git diff --cached'
