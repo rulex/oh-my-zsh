@@ -7,7 +7,6 @@ alias ...='cd ../..'
 alias -- -='cd -'
 
 # Super user
-alias _='sudo'
 alias please='sudo'
 
 #alias g='grep -in'
