@@ -27,9 +27,12 @@ fi
 # List direcory contents
 alias ls='ls -F --color=auto --time-style="+%Y-%m-%d %H:%M:%S" '
 alias lsa='ls -lah'
+<<<<<<< HEAD
 alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias ll='ls -l'
+alias la='ls -lA'
+alias lc='ls -ltrc'
+alias lca='ls -ltrca'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
