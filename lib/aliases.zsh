@@ -27,7 +27,6 @@ fi
 # List direcory contents
 alias ls='ls -F --color=auto --time-style="+%Y-%m-%d %H:%M:%S" '
 alias lsa='ls -lah'
-<<<<<<< HEAD
 alias l='ls -lah'
 alias ll='ls -l'
 alias la='ls -lA'
@@ -55,5 +54,6 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias glga="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias gln='git log --pretty=format:"%C(red)%h%C(reset) - %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)" --name-only'
 alias gls='git show --pretty=format:"%C(red)%h%C(reset) - %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)"'
+alias glc='git shortlog --no-merges -nes'
 
 source ~/gitdocs/private.sh
