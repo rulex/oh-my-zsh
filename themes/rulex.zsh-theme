@@ -7,7 +7,19 @@ PROMPT='%{$fg[cyan]%}%{$reset_color%}%n@%M%{$fg[cyan]%}%{$fg[magenta]%} %~$(git_
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[blue]%}(%{$fg_no_bold[yellow]%}" # %B
 ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
+
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[082]%}✚%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[166]%}✹%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[160]%}✖%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[220]%}➜%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[082]%}═%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[190]%}✭%{$reset_color%}"
+
+# you should be using single quotes instead of double quotes for the strings containing $(git...) invocations, so they're evaluated each time the prompt is displayed, instead of once at prompt definition time.
+PROMPT='%{$fg[cyan]%}[%{$reset_color%}%n@%M%{$fg[cyan]%}]%{$fg[magenta]%} %~ $(if [ $? = 0 ]; then echo -e "%{$fg[green]%}\xE2\x9d\xa4"; else echo -e "%{$fg[red]%}%?"; fi) %{$fg[cyan]%}%(!.#.$)%{$reset_color%} '
+
+RPROMPT='$(git_prompt_info)'
 
 # LS colors, made with http://geoff.greer.fm/lscolors/
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
