@@ -19,7 +19,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[190]%}✭%{$reset_color%}"
 # you should be using single quotes instead of double quotes for the strings containing $(git...) invocations, so they're evaluated each time the prompt is displayed, instead of once at prompt definition time.
 PROMPT='%{$fg[cyan]%}[%{$reset_color%}%n@%M%{$fg[cyan]%}]%{$fg[magenta]%} %~ $(if [ $? = 0 ]; then echo -e "%{$fg[green]%}\xE2\x9d\xa4"; else echo -e "%{$fg[red]%}%?"; fi) %{$fg[cyan]%}%(!.#.$)%{$reset_color%} '
 
-RPROMPT='$(git_prompt_info)'
+#RPROMPT='$(git_prompt_info)'
 
 # LS colors, made with http://geoff.greer.fm/lscolors/
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
